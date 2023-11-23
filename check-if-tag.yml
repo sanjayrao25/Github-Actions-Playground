@@ -1,0 +1,11 @@
+name: Action that prints whether ref_type is branch or tag
+on:
+  push:
+    - '**'
+jobs:
+  tag-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check ref type
+        run: |
+          echo ${{github.ref_type}}
