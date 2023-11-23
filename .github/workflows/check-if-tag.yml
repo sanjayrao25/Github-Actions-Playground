@@ -1,7 +1,10 @@
 name: Action that prints whether ref_type is branch or tag
 on:
   push:
-    - '**'
+    branches:
+      - '**'
+    tags:
+      - '**'
 jobs:
   tag-check:
     runs-on: ubuntu-latest
